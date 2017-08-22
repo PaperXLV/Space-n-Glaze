@@ -16,3 +16,24 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+
+.darken {
+    background-color: rgba(0, 0, 0, 1);
+    opacity: .75;
+}
+
+.carousel-image {
+    width: 800px;
+    height: 600px;
+}
+
+#carouselExampleSlidesOnly {
+    width: 800px;
+    height: 600px;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 800px;
+    height: 600px;
+}
