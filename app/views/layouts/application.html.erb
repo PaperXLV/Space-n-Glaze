@@ -4,10 +4,34 @@
     <title>Space n' Glaze</title>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+
     <%= csrf_meta_tags %>
     
   </head>
   <body>
+    <div class="container">
+      <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse navbar-shadow">
+        <%= image_tag("Donut_icon.png", :class => "navbar-icon navbar-brand navbar-text") %>
+        <h3 class="navbar-text">Space n' Glaze</h3>
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto no-bullets">
+            <li class="nav-item navbar-text">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item navbar-text">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item navbar-text">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item navbar-text">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <%= yield %>
   </body>
 </html>

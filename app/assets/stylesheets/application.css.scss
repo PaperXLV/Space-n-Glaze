@@ -17,23 +17,40 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+    background: #252525;
+}
+
+h1, h2, h3, h4, h5, p {
+    font-family: 'Courgette', cursive;
+    color: #9d9d9d;
+}
+
+.navbar-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.navbar-icon {
+    padding: 0;
+    width: 25px;
+    height: 25px;
+}
 
 .darken {
     background-color: rgba(0, 0, 0, 1);
     opacity: .75;
 }
 
-.carousel-image {
-    width: 800px;
-    height: 600px;
-}
 
-#carouselExampleSlidesOnly {
-    width: 800px;
-    height: 600px;
+.carousel-outline {
+    border: 1px solid black;
+    border-radius: 10px;
 }
 
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    width: 800px;
-    height: 600px;
+    height: 800px;
+}
+
+.no-bullets {
+    list-style: none;
 }
