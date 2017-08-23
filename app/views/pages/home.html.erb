@@ -1,24 +1,61 @@
 <div class="container">
-    <div class="text-center">
-        <h3>Donut delivery so excelent it could only be from space</h3>
-        
-        <div id="carouselExampleSlidesOnly" class="carousel slide carousel-image text-center navbar-shadow" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner carousel-outline darken" role="listbox">
-                <div class="carousel-item item active">
-                    <%= image_tag("Donut-Wallpaper-1.jpg", alt: "First Slide", :class => "d-block carousel-image img-fluid darken") %>
-                </div>
-                <div class="carousel-item item">
-                    <%= image_tag("Donut-Wallpaper-2.jpg", alt: "First Slide", :class => "d-block carousel-image img-fluid darken") %>
-                </div>
-                <div class="carousel-item item">
-                    <%= image_tag("Donut-Wallpaper-3.jpg", alt: "First Slide", :class => "d-block carousel-image img-fluid darken") %>
-                </div>
+    <h3 class="text-center">Donut delivery so excelent it could only be from space</h3>
+    
+    <div id="carouselExampleSlidesOnly" class="carousel slide carousel-image text-center navbar-shadow" data-ride="carousel" data-interval="3000">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner carousel-outline darken" role="listbox">
+            <div class="carousel-item item active">
+                <%= image_tag("Donut-Wallpaper-1.jpg", alt: "First Slide", :class => "d-block carousel-image img-fluid darken") %>
+            </div>
+            <div class="carousel-item item">
+                <%= image_tag("Donut-Wallpaper-2.jpg", alt: "First Slide", :class => "d-block carousel-image img-fluid darken") %>
+            </div>
+            <div class="carousel-item item">
+                <%= image_tag("Donut-Wallpaper-3.jpg", alt: "First Slide", :class => "d-block carousel-image img-fluid darken") %>
             </div>
         </div>
-    </div> 
+    </div>
+    
+    <div class="divider-new">
+        <h2>Our Promise</h2>
+    </div>
+    <section id="our-promise" class="text-center">
+        <p>Our donuts will be delivered fresh to your door within 2 hours. We take pride
+        in our average customer satisfaction rating of 246% and hope to improve with
+        your order. Space n' Glaze is a dedicated business that really cares and will
+        do everything to make your donut delivery the best possible.</p>
+    </section>
+    
+    <div class="divider-new">
+        <h2>Customer Testimonials</h2>
+    </div>
+    <section id="testimonials">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="fade-in">"These donuts are so good they fixed my marriage! Thanks
+                Space n' Glaze!" -Yim Oudom</p>
+            </div>
+            <div class="col-md-6">
+                <p>"I have honestly never had a better donut, especially not
+                one that is delivered to my house. I got evicted from my house
+                for not paying rent because I spent all my money on donuts,
+                so now I can't really utilize the delivery service, but I still
+                love this place" -Mak Sov</p>
+            </div>
+        </div>
+    </section>
+    
+        
+    <div class="row">
+        <div class="col-md-6">
+            <%= link_to "Place an Order", '#', class: 'btn btn-lg btn-success btn-block font-text' %>
+        </div>
+        <div class="col-md-6">
+            <%= link_to "Contact Us", new_contact_path, class: 'btn btn-lg btn-primary btn-block font-text' %>
+        </div>
+    </div>
 </div>

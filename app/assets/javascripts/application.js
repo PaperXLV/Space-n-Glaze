@@ -15,3 +15,10 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+/* global $ */
+
+
+$(document).on('turbolinks:load', function(){
+    $('.fade-in').addClass('fade-in-effect');
+});
