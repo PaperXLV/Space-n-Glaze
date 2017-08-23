@@ -20,5 +20,17 @@
 
 
 $(document).on('turbolinks:load', function(){
-    $('.fade-in').addClass('fade-in-effect');
+    var fades = $('.fade-in');
+    
+    $(window).scroll( function() {
+        fades.each(function(i) {
+            var bottomob = $(this).position().top + $(this).outerHeight();
+            var bottomwind = $(window).scrollTop() + $(window).height();
+            
+            if (bottomwind > bottomob) {
+                $(this).delay(1500).addClass('fade-in-effect');
+                $(this).removeClass('fade-in');
+            }
+        });
+    });
 });

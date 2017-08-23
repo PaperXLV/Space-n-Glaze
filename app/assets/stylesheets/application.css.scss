@@ -108,6 +108,10 @@ h1, h2, h3, h4, h5, p {
     list-style: none;
 }
 
+.fade-in {
+    opacity: 0;
+}
+
 .fade-in-effect {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
