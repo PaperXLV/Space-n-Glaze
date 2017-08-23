@@ -61,8 +61,18 @@ h1, h2, h3, h4, h5, p {
     border-radius: 10px;
 }
 
+.outline {
+    border: 1px solid black;
+}
+
 .carousel-inner > .item > img, .carousel-inner > .item > a > img {
     height: 800px;
+}
+
+.footer {
+    border-radius: 50px 50px 5px 5px;
+    margin-top: 60px;
+    background-color: #222;
 }
 
 .divider-new {
