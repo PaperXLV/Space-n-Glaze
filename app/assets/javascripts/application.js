@@ -21,6 +21,8 @@
 
 $(document).on('turbolinks:load', function(){
     var fades = $('.fade-in');
+    var navfoot = $('.navbar-bottom');
+    
     
     $(window).scroll( function() {
         fades.each(function(i) {
@@ -33,4 +35,13 @@ $(document).on('turbolinks:load', function(){
             }
         });
     });
+    
+    var body = document.body,
+    html = document.documentElement;
+
+    var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+    
+
+    
 });
