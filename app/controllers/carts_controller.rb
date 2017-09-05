@@ -1,8 +1,4 @@
-class CartsController < ApplicationController 
-   def new
-   end
-   
-   def index
-   end
-    
+class CartsController < ApplicationController
+  def show
+  end
 end
