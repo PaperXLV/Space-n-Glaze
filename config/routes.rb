@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   resources :contacts, only: :create
   resources :carts
   get 'contact-us', to: 'contacts#new', as: 'new_contact'
-  get 'shop', to: 'pages#shop'
+  get 'shop', to: 'products#index'
 end

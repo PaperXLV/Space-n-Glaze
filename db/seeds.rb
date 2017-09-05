@@ -7,9 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Product.delete_all
-Product.create! id: 1, name: "Banana", price: 0.49, active: true
-Product.create! id: 2, name: "Apple", price: 0.29, active: true
-Product.create! id: 3, name: "Strawberries", price: 1.99, active: true
+Product.create! id: 1, name: "Glazed", price: 0.80, active: true, image: 'glazed-donut.png'
+Product.create! id: 2, name: "Sprinkled", price: 0.80, active: true, image: 'sprinkle-donut.jpg'
+Product.create! id: 3, name: "Heart", price: 0.99, active: true, image: 'heart-donut.jpg'
+Product.create! id: 4, name: "Specialty", price: 1.19, active: true, image: 'specialty-donut.jpg'
 
 
 OrderStatus.delete_all
