@@ -74,8 +74,8 @@ h1, h2, h3, h4, h5, p {
 }
 
 .shop-img {
-    width: 100%;
-    height: 222.5px;
+    width: 222px;
+    height: 222px;
 }
 
 .spacing {
@@ -91,6 +91,23 @@ h1, h2, h3, h4, h5, p {
 .footer {
     border-radius: 25px 25px 5px 5px;
     background-color: #222;
+}
+
+.well {
+    background-color: #333;
+    border-color: #101010;
+}
+
+.shop-border {
+    border-radius: 10px 10px 0 0;
+}
+
+.shop-button-border {
+    border-radius: 0 0 4px 4px;
+}
+
+.shop-input-border {
+    border-radius: 0 0 0 4px;
 }
 
 .divider-new {
