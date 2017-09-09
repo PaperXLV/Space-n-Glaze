@@ -16,14 +16,13 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
-/* global $ */
+/* global $ location */
 
 
 $(document).on('turbolinks:load', function(){
     var fades = $('.fade-in');
-    var navfoot = $('.navbar-bottom');
-    
-    
+    var add_carts = $('.cart-button');
+
     $(window).scroll( function() {
         fades.each(function(i) {
             var bottomob = $(this).position().top + $(this).outerHeight();
@@ -36,12 +35,8 @@ $(document).on('turbolinks:load', function(){
         });
     });
     
-    var body = document.body,
-    html = document.documentElement;
-
-    var height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-    
-
+    add_carts.click( function() {
+         location.reload();
+    });
     
 });
