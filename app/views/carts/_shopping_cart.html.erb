@@ -12,7 +12,30 @@
     There are no items in your shopping cart.  Please <%= link_to "go back", shop_path %> and add some items to your cart.
   </p>
 <% else %>
-  <% @order_items.each do |order_item| %>
-    <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
-  <% end %>
+  <div class="container">
+    <h2>Cart</h2>
+    <hr>
+    <% @order_items.each do |order_item| %>
+      <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
+    <% end %>
+    <div class="row">
+      <div class="col-md-11">
+        <h4>Subtotal</h4>
+        <h4>Shipping</h4>
+        <h4>Tax</h4>
+      </div>
+      <div class="col-md-1">
+        <h4><%= number_to_currency current_order.subtotal %></h4>
+        <h4>--</h4> <!-- Currently there is no calculation for shipping so we're not putting anything here -->
+        <h4><%= number_to_currency current_order.subtotal * 0.065 %></h4>
+      </div>
+    </div>
+    <hr>
+    <div class="col-md-11">
+        <h2>Total</h2>
+      </div>
+      <div class="col-md-1">
+        <h2><%= number_to_currency current_order.subtotal * 1.065 %></h2> <!-- I'll have to fix this if I put in shipping -->
+      </div>
+  </div>
 <% end %>
