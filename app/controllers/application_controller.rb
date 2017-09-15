@@ -5,10 +5,10 @@ class ApplicationController < ActionController::Base
   helper_method :current_order
   
   def current_order
-    if session[:order_id].nil?
+    if cookies[:order_id].nil?
       Order.new
     else
-      Order.find(session[:order_id])
+      Order.find(cookies[:order_id])
     end
   end
 end

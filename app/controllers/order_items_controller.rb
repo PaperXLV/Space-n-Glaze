@@ -8,7 +8,7 @@ class OrderItemsController < ApplicationController
     else
       @order.save
     end
-    session[:order_id] = @order.id
+    cookies[:order_id] = @order.id
   end
 
   def update
