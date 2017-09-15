@@ -1,0 +1,52 @@
+<%= form_for @card do |f| %>
+  <div class="field form-group">
+    <div class="row">
+      <div class="col-md-6">
+        <%= f.label :first_name, class: 'font-text' %><br />
+        <%= f.text_field :first_name, autofocus: true, class: 'form-control', placeholder: 'Jane' %>
+      </div>
+      <div class="col-md-6">
+        <%= f.label :last_name, class: 'font-text' %><br />
+        <%= f.text_field :last_name, class: 'form-control', placeholder: 'Doe' %>
+      </div>
+    </div>
+  </div>
+  
+  <div class="field form-group">
+    <%= f.label :email, class: 'font-text' %><br />
+    <%= f.email_field :email, class: 'form-control', placeholder: 'Example@email.com' %>
+  </div>
+  
+  <div class="field form-group">
+    <%= f.label :address, class: 'font-text' %><br />
+    <%= f.text_field :address, class: 'form-control', placeholder: '42 Wallaby Way, Sydney' %>
+  </div>
+  
+  <div class="field form-group">
+    <%= label_tag :card_number, "Credit Card Number", class: 'font-text' %>
+    <%= text_field_tag :card_number, nil, name: nil, class: 'form-control', placeholder: 'Please don\'t actually give me your card number' %>
+  </div>
+  
+  <div class="field form-group">
+    <div class="row">
+      <div class="col-md-6">
+        <%= label_tag :card_code, "Security Code (cvv)", class: 'font-text' %>
+        <%= text_field_tag :card_code, nil, name: nil, class: 'form-control', placeholder: 'I\'m just learning web dev, this isn\'t real' %>
+      </div>
+      
+      <div class="col-md-3">
+        <%= label_tag :card_month, "Card Expiration", class: 'font-text' %><br>
+        <%= select_month nil, {add_month_numbers: false}, {name: nil, id: 'card_month', class: 'form-control' } %>
+      </div>
+      <div class="col-md-3">
+        <%= label_tag 'blank', "hidden", class: 'invis' %><br>
+        <%= select_year nil, {start_year: Date.today.year, end_year: Date.today.year+15}, {name: nil, id: 'card_year', class: 'form-control' } %>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions form-group">
+    <%= f.submit "Submit", class: 'btn btn-primary', id: 'form-submit-btn' %>
+  </div>
+
+<% end %>

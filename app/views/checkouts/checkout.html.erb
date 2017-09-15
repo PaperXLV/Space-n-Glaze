@@ -1,0 +1,25 @@
+<% if !@order_item.nil? && @order_item.errors.any? %>
+  <div class="alert alert-danger">
+    <ul>
+    <% @order_item.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+<% if @order_items.size == 0 %>
+  <p class="text-center">
+    There are no items in your shopping cart.  Please <%= link_to "go back", shop_path %> and add some items to your cart.
+  </p>
+<% else %>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Checkout</h2>
+        <div class="well">
+          <%= render "checkout_form" %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

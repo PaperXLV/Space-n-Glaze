@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   resources :contacts, only: :create
   resources :carts
+  resources :cards, only: :create
   get 'contact-us', to: 'contacts#new', as: 'new_contact'
   get 'shop', to: 'products#index'
+  get 'checkout', to: 'checkouts#checkout'
 end

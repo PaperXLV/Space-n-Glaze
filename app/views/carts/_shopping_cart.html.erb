@@ -32,10 +32,13 @@
     </div>
     <hr>
     <div class="col-md-11">
-        <h2>Total</h2>
+      <h2>Total</h2>
       </div>
       <div class="col-md-1">
         <h2><%= number_to_currency current_order.subtotal * 1.065 %></h2> <!-- I'll have to fix this if I put in shipping -->
       </div>
+      
+      <%= link_to "Checkout", checkout_path, class: 'btn btn-success btn-right' %>
   </div>
+  
 <% end %>
