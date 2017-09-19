@@ -1,4 +1,4 @@
-/* global $, Stripe */
+/* global $, Stripe, Charge */
 //Document ready
 $(document).on('turbolinks:load', function() {
     var checkoutform = $('#checkout-form');
@@ -41,7 +41,7 @@ $(document).on('turbolinks:load', function() {
         } 
         else {
             Stripe.createToken({
-            number : ccNum, 
+            number: ccNum, 
             cvc: cvcNum,
             exp_month: expMonth,
             exp_year: expYear
@@ -55,6 +55,11 @@ $(document).on('turbolinks:load', function() {
     function stripeResponseHandler(status, response) {
         //Get token from response
         var token = response.id;
+        
+        // TODO: WRITE CODE TO CREATE STRIPE CHARGE AND HANDLER
+        // WE MAKIN US A STORE WOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+        
+        
         checkoutform.append( $('<input type="hidden" name="user[stripe_customer_token">').val(token) );
         checkoutform.get(0).submit();
     }
