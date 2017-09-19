@@ -14,6 +14,12 @@ class CardsController < ApplicationController
           :customer => customer.id
           )
           
+      newCustomer = Customer.new
+      newCustomer.customer_id = customer.id
+      newCustomer.email = customer.email
+      newCustomer.save!
+      
+          
       redirect_to root_url
    end
    
