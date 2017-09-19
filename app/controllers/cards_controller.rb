@@ -1,23 +1,19 @@
 class CardsController < ApplicationController
    def create
-      token = params[:user][:stripe_customer_token]
+      
       
       customer = Stripe::Customer.create(
           :email => params[:card][:email],
-          :source => token,
+          :source => params[:user][:stripe_customer_token]
           )
       
       charge = Stripe::Charge.create(
-          :amount => current_order.subtotal * 1.065 * 100,
+          :amount => (current_order.subtotal * 106.5).to_i, #again here, I should put the final total in the current_order so I'm not doing math on this step because thats sketch
           :currency => "usd",
           :description => "Space n Glaze Order",
-          :customer => customer
+          :customer => customer.id
           )
           
-      
-       
-      newCard = Card.new(card_params)
-      newCard.save
       redirect_to root_url
    end
    
@@ -29,5 +25,9 @@ class CardsController < ApplicationController
    private
     def card_params
       params.require(:card).permit(:first_name, :last_name, :email, :stripe_customer_token, :address)
+    end
+    
+    def customer_params
+       #params.require(:customer).permit(:) 
     end
 end
