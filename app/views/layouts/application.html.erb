@@ -29,8 +29,6 @@
             </li>
             <li class="nav-item navbar-text">
               <%= render 'layouts/cart_text' %>
-              
-              
             </li>
             <li class="nav-item navbar-text">
               <%= link_to "About", about_path, class: 'nav-link' %>
@@ -38,6 +36,12 @@
           </ul>
         </div>
       </nav>
+    </div>
+    
+    <div class="container flash-container">
+      <% flash.each do |type, msg| %>
+        <%= content_tag :div, msg, class: "alert alert-#{type}" %>
+      <% end %>
     </div>
     <%= yield %>
   </body>

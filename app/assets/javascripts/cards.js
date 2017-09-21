@@ -1,4 +1,4 @@
-/* global $, Stripe, Charge */
+/* global $, Stripe */
 //Document ready
 $(document).on('turbolinks:load', function() {
     var checkoutform = $('#checkout-form');
@@ -55,9 +55,6 @@ $(document).on('turbolinks:load', function() {
     function stripeResponseHandler(status, response) {
         //Get token from response
         var token = response.id;
-        
-        // TODO: WRITE CODE TO CREATE STRIPE CHARGE AND HANDLER
-        // WE MAKIN US A STORE WOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
         
         
         checkoutform.append( $('<input type="hidden" name="user[stripe_customer_token">').val(token) );

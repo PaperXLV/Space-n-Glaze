@@ -39,4 +39,6 @@ $(document).on('turbolinks:load', function(){
          location.reload();
     });
     
+    $('.alert').delay(1000).fadeOut(4000);
+    
 });
